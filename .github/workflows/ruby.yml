@@ -23,8 +23,7 @@ jobs:
     - name: start zalenium
       uses: ./
     - name: is zalenium started?
-      run: curl http://localhost:4444/status:
-     
+      run: curl http://localhost:4444/status
   test:
     runs-on: ubuntu-latest
     steps:
