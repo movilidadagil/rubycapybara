@@ -14,6 +14,9 @@ task :os_x_10_14_chrome_latest do
   run_tests('OS X 10.14', 'chrome', 'latest', 'junit_reports/os_x_10_14_chrome_latest')
 end
 
+task :ubuntu_chrome_latest do
+  run_tests('ubuntu-18.04 10.14', 'chrome', 'latest', 'junit_reports/ubuntu_chrome_latest')
+end
 multitask :test_testingbot => [
     :windows_10_ie_11,
     :windows_7_firefox_latest,
