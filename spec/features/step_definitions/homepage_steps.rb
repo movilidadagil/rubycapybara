@@ -4,7 +4,7 @@ require "selenium-webdriver"
 describe "I am on manager portal login page" do
   it "open manager portal login page" do
     driver = Selenium::WebDriver.for :chrome
-    driver.navigate.to "https://staging.propertyfinder.ae/manager/login"
+    driver.navigate.to 'https://staging.propertyfinder.ae/manager/login'
     title_text = driver.title
     match_title(title_text)
     driver.quit
