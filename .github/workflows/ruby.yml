@@ -14,8 +14,18 @@ on:
     branches: [ master ]
 
 jobs:
+  start-zalenium:
+    runs-on: ubuntu-latest
+    name: ZALENIUM JOB
+    steps:
+    - uses: actions/checkout@v2
+    - run: npm ci    
+    - name: start zalenium
+      uses: ./
+    - name: is zalenium started?
+      run: curl http://localhost:4444/status:
+     
   test:
-
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
