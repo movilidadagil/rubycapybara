@@ -22,7 +22,7 @@ task :single_exec, [:project, :browser] do
   project = project
   browser = browser
   puts ("<< Project: #{project},  Process: 1, Browser: #{browser} >>")
-  system "rspec features/step_definitions/homepage_steps.rb"
+  system "rspec spec/features/step_definitions/homepage_steps.rb"
 end
 task :default do
   Rake::Task[:single_exec].invoke('ubuntu_20_04_chrome_latest', 'chrome', 'latest')
