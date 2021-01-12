@@ -18,7 +18,13 @@ end
 task :ubuntu_20_04_chrome_latest do
   run_tests('Ubuntu-20.04 10.14', 'chrome', 'latest')
 end
+task :single_exec, [:project, :browser] do
+  project = project
+  browser = browser
+  puts ("<< Project: #{project},  Process: 1, Browser: #{browser} >>")
+  system "rspec features/step_definitions/homepage_steps.rb"
+end
 task :default do
-  Rake::Task[:ubuntu_20_04_chrome_latest].invoke('ubuntu_20_04_chrome_latest', 'chrome', 'latest')
+  Rake::Task[:single_exec].invoke('ubuntu_20_04_chrome_latest', 'chrome', 'latest')
 end
 
