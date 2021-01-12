@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Given /^I am on manager portal loginpage$/ do
+Given /^I am on manager portal login page$/ do
   visit 'https://staging.propertyfinder.ae/manager/login'
 end
 
