@@ -8,7 +8,7 @@ task :windows_10_ie_11 do
 end
 
 task :windows_7_firefox_latest do
-  run_tests('Windows 7', 'firefox','latest')
+  run_tests('Windows 7', 'firefox', 'latest')
 end
 
 task :os_x_10_14_chrome_latest do
