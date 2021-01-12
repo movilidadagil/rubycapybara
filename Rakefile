@@ -19,6 +19,6 @@ task :ubuntu_20_04_chrome_latest do
   run_tests('Ubuntu-20.04 10.14', 'chrome', 'latest')
 end
 task :default do
-  Rake::Task[:run_tests].invoke('ubuntu_20_04_chrome_latest', 'chrome', 'latest')
+  Rake::Task[:ubuntu_20_04_chrome_latest].invoke('ubuntu_20_04_chrome_latest', 'chrome', 'latest')
 end
 
